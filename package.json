@@ -1,20 +1,41 @@
 {
-  "name": "hex-color-to-color-name",
-  "version": "1.0.0",
-  "description": "\"# Converts Hex Codes to Color Names\"",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jeff3754/HexColorToColorName.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jeff3754/HexColorToColorName/issues"
-  },
-  "homepage": "https://github.com/jeff3754/HexColorToColorName#readme"
+    "name": "hex-color-to-color-name",
+    "version": "1.0.0",
+    "description": "Converts Hex Codes to Color Names",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+        "test": "jest --config jestconfig.json",
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "lint": "tslint -p tsconfig.json",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm test",
+        "preversion": "npm run lint",
+        "version": "git add -A src",
+        "postversion": "git push && git push --tags"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jeff3754/HexColorToColorName.git"
+    },
+    "keywords": ["HexColor", "HexCode", "HexColorCode", "HexColorCodeToColorName", "ColorName"],
+    "author": "Jefferin Joseph",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jeff3754/HexColorToColorName/issues"
+    },
+    "homepage": "https://github.com/jeff3754/HexColorToColorName#readme",
+    "devDependencies": {
+        "@types/jest": "^26.0.9",
+        "jest": "^26.4.0",
+        "prettier": "^2.0.5",
+        "ts-jest": "^26.2.0",
+        "tslint": "^6.1.3",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^3.9.7"
+    },
+    "files": [
+        "lib/**/*"
+    ]
 }
