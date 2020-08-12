@@ -1,5 +1,5 @@
-import { Greeter } from '../index';
+import { GetColorName } from '../index';
 
-test('My Greeter', () => {
-  expect(Greeter('Carl')).toBe('Hello Carl');
+test('Get Color Name', () => {
+  expect(GetColorName('#000000')).toBe('Black');
 });
