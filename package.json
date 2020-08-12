@@ -1,0 +1,20 @@
+{
+  "name": "hex-color-to-color-name",
+  "version": "1.0.0",
+  "description": "\"# Converts Hex Codes to Color Names\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeff3754/HexColorToColorName.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeff3754/HexColorToColorName/issues"
+  },
+  "homepage": "https://github.com/jeff3754/HexColorToColorName#readme"
+}
