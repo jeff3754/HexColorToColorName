@@ -15,7 +15,7 @@ npm install hex-color-to-color-name
 ```typescript
 import { GetColorName } from 'hex-color-to-color-name';
 
-const colorName = GetColorName('000000'); # returns 'Black'
+const colorName = GetColorName('000000'); // returns 'Black'
 ```
 
 ## Contributing
