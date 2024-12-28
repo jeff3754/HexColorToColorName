@@ -1,6 +1,6 @@
 # HexColorToColorName
 
-HexColorToColorName is a TypeScript library which give you the closest human-readable color name for a color's hexcode.
+HexColorToColorName is a TypeScript library which gives you the closest human-readable color name for a color's hexcode.
 
 ## Installation
 
@@ -13,15 +13,20 @@ npm install hex-color-to-color-name
 ## Usage
 
 ```typescript
-import { GetColorName } from 'hex-color-to-color-name';
+import { GetColorName } from "hex-color-to-color-name";
 
-const colorName = GetColorName('000000'); // returns 'Black'
+const colorName = GetColorName("000000"); // returns "Black"
 ```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+## Donate
+Like my work? Buy me [Ko-Fi](https://ko-fi.com/jefferinjoseph)! ☕❤️
+
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
