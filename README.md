@@ -24,7 +24,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## Donate
-Like my work? Buy me [Ko-Fi](https://ko-fi.com/jefferinjoseph)! ☕❤️
+Like my work? Buy me a [Ko-Fi](https://ko-fi.com/jefferinjoseph)! ☕❤️
 
 
 
