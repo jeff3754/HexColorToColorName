@@ -4,11 +4,12 @@
     "description": "Converts Hex Codes to Color Names",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
+    "type": "module",
     "scripts": {
-        "test": "jest --config jestconfig.json",
+        "test": "vitest run",
         "build": "tsc",
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-        "lint": "tslint -p tsconfig.json",
+        "lint": "eslint \"src/**/*.ts\" --fix",
         "prepare": "npm run build",
         "prepublishOnly": "npm test",
         "preversion": "npm run lint",
@@ -19,7 +20,13 @@
         "type": "git",
         "url": "git+https://github.com/jeff3754/HexColorToColorName.git"
     },
-    "keywords": ["HexColor", "HexCode", "HexColorCode", "HexColorCodeToColorName", "ColorName"],
+    "keywords": [
+        "HexColor",
+        "HexCode",
+        "HexColorCode",
+        "HexColorCodeToColorName",
+        "ColorName"
+    ],
     "author": "Jefferin Joseph",
     "license": "ISC",
     "bugs": {
@@ -27,13 +34,14 @@
     },
     "homepage": "https://github.com/jeff3754/HexColorToColorName#readme",
     "devDependencies": {
-        "@types/jest": "^26.0.9",
-        "jest": "^26.4.0",
-        "prettier": "^2.0.5",
-        "ts-jest": "^26.2.0",
-        "tslint": "^6.1.3",
-        "tslint-config-prettier": "^1.18.0",
-        "typescript": "^3.9.7"
+        "@typescript-eslint/eslint-plugin": "^8.54.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.5",
+        "globals": "^17.3.0",
+        "prettier": "^3.8.1",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.54.0",
+        "vitest": "^4.0.18"
     },
     "files": [
         "lib/**/*"
