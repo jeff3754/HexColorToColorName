@@ -1,8 +1,9 @@
 # 🎨 HexColorToColorName
 
 [![npm version](https://img.shields.io/npm/v/hex-color-to-color-name.svg)](https://www.npmjs.com/package/hex-color-to-color-name)
+[![npm provenance](https://img.shields.io/badge/npm-provenance-blue)](https://www.npmjs.com/package/hex-color-to-color-name?activeTab=code)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://github.com/jeff3754/HexColorToColorName/actions/workflows/test.yml/badge.svg)](https://github.com/jeff3754/HexColorToColorName/actions)
+[![Test Status](https://github.com/jeff3754/HexColorToColorName/actions/workflows/test.yml/badge.svg)](https://github.com/jeff3754/HexColorToColorName/actions)
 
 A lightweight, zero-dependency TypeScript library that maps hex codes to the closest human-readable color names. Perfect for accessibility, UI/UX tools, and design systems.
 
