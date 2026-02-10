@@ -9,6 +9,7 @@ jobs:
     permissions:
       contents: write # This allows semantic-release to push tags
       id-token: write # This allows OIDC authentication
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
