@@ -10,6 +10,7 @@ jobs:
       contents: write # This allows semantic-release to push tags
       id-token: write # This allows OIDC authentication
       pull-requests: write
+      issues: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -23,9 +24,10 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # We provide a dummy NPM_TOKEN to bypass the plugin's internal check
-          # while the 'run' script below handles the actual OIDC authentication.
-          NPM_TOKEN: "use-oidc-instead"
         run: |
-          npm config set //registry.npmjs.org/:_authToken ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}
+          # 1. Let semantic-release bump the version and create the Tag
           npx semantic-release
+          
+          # 2. Use the standard npm command to publish via OIDC
+          # This command skips the 'whoami' token check that was failing
+          npm publish --provenance --access public
