@@ -7,7 +7,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write # This allows semantic-release to push tags
       id-token: write # This allows OIDC authentication
     steps:
       - uses: actions/checkout@v4
