@@ -1,6 +1,7 @@
 # 🎨 HexColorToColorName
 
 [![npm version](https://img.shields.io/npm/v/hex-color-to-color-name.svg)](https://www.npmjs.com/package/hex-color-to-color-name)
+[![NPM Weekly Downloads](https://img.shields.io/npm/dw/hex-color-to-color-name)](https://www.npmjs.com/package/hex-color-to-color-name)
 [![npm provenance](https://img.shields.io/badge/npm-provenance-blue)](https://www.npmjs.com/package/hex-color-to-color-name?activeTab=code)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Test Status](https://github.com/jeff3754/HexColorToColorName/actions/workflows/test.yml/badge.svg)](https://github.com/jeff3754/HexColorToColorName/actions)
