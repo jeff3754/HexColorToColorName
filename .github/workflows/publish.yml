@@ -8,8 +8,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: write       # Allows creating git tags/releases
-      id-token: write       # Crucial for NPM OIDC Provenance verification
+      contents: write       # Allows semantic-release to create git tags/releases
+      id-token: write       # Required for NPM OIDC Provenance verification
       pull-requests: write  # Allows commenting on merged PRs
       issues: write         # Allows commenting on related issues
 
@@ -23,13 +23,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'      
-          registry-url: 'https://npmjs.org'
+          # REMOVED: registry-url is removed here to prevent npm ci 403 blocks
 
       - name: Install Dependencies
-        # FIX: Inject the auth token here so the dependency fetch doesn't hit a 403 wall
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm ci
+        run: npm ci                  # Will run anonymously and flawlessly
 
       - name: Run Build
         run: npm run build           
@@ -37,5 +34,5 @@ jobs:
       - name: Automated Release and Publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} 
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # Feeds token directly to semantic-release
         run: npx semantic-release
