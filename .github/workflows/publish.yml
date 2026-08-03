@@ -2,7 +2,7 @@ name: Publish to NPM
 
 on:
   push:
-    branches: [master] # Triggers immediately when code or a PR lands on master
+    branches: [master]
 
 jobs:
   publish:
@@ -17,22 +17,25 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          persist-credentials: false # Avoids permission token loops
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 'lts/*'      # Uses stable Node environment
+          node-version: 'lts/*'      
           registry-url: 'https://npmjs.org'
 
       - name: Install Dependencies
+        # FIX: Inject the auth token here so the dependency fetch doesn't hit a 403 wall
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm ci
 
       - name: Run Build
-        run: npm run build           # Compiles your TypeScript files
+        run: npm run build           
 
       - name: Automated Release and Publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # Feeds your NPM secret to semantic-release
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} 
         run: npx semantic-release
