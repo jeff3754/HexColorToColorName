@@ -3,6 +3,7 @@
     "target": "es2020",
     "module": "Node16",
     "declaration": true,
+    "rootDir": "./src",
     "outDir": "./lib",
     "strict": true,
     "esModuleInterop": true,
@@ -11,6 +12,7 @@
     "lib": ["es2020"],
     "moduleResolution": "Node16",
     "downlevelIteration": true,
+    "ignoreDeprecations": "6.0",
     "isolatedModules": true
   },
   "include": ["src"],
