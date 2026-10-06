@@ -46,7 +46,7 @@ const color2 = GetColorName("ff0000"); // returns "Red"
 const color3 = GetColorName("#f5f5dc"); // returns "Beige"
 
 // Closest matches for non-exact hex codes
-const approximateColor1 = GetColorName("#1a1a1b"); // returns "Black"
+const approximateColor1 = GetColorName("#1a1a1b"); // returns "Shark"
 const approximateColor2 = GetColorName("1E90F0"); // returns "Dodger Blue"
 
 // 4-digit hex codes (alpha ignored)
@@ -76,7 +76,7 @@ const blackPacket: ColorPacket = GetColorPacket("#000000");
 const approximatePacket: ColorPacket = GetColorPacket("#1a1a1b");
 /*
 {
-  colorName: "Black",
+  colorName: "Shark",
   hexCode: "1A1A1B",
   rgb: { r: 26, g: 26, b: 27 },
   hsl: { h: 240, s: 2, l: 10 }
