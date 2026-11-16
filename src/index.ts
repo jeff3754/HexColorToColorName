@@ -10,6 +10,8 @@
 import { rgb, hsl, processHex, findColorName, getInvalidColorMessage } from './internal/color-utils.js';
 import type { ColorPacket } from './internal/types.js';
 
+export type { ColorPacket } from './internal/types.js';
+
 /**
  * Gets the closest human-readable color name for a given hex color code.
  *
